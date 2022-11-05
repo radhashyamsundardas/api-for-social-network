@@ -1,0 +1,26 @@
+{
+  "name": "api-for-social-network",
+  "version": "1.0.0",
+  "description": "api for social network",
+  "main": "server.js",
+  "scripts": {
+    "nodemon": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radhashyamsundardas/api-for-social-network.git"
+  },
+  "author": "hiren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radhashyamsundardas/api-for-social-network/issues"
+  },
+  "homepage": "https://github.com/radhashyamsundardas/api-for-social-network#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.1",
+    "nodemon": "^2.0.20"
+  }
+}
