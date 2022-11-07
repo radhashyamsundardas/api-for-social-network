@@ -23,7 +23,7 @@ const reacSchema = new Schema(
             type:Date,
             default: Date.now,
             get: (createdAt) =>
-            moment(createdAt).format("MM,DD,YYYY [at] hh.mm a"),
+            moment(createdAtVal).format("MM,DD,YYYY [at] hh.mm a"),
         },
     },
     {
@@ -32,6 +32,48 @@ const reacSchema = new Schema(
         },
     }
 );
+
+
+const thotSchema = new Schema(
+    {
+        thoughtText: {
+            type: String,
+            required: true,
+            minlength: 1,
+            maxlength: 280,
+        },
+        createdAt: {
+            type: Date,
+            default:  Date.now,
+            get: (createdAtVal) =>
+            moment(createdAtVal).format("MM,DD,YYYY [at] hh.mm a"),
+        },
+        username: {
+            type:String,
+            require: true,
+        },
+    reactions: [reacSchema],
+}, {
+    toJSON: {
+        getters: true,
+    },
+    id: false,
+}
+);
+
+const thought = model('Thought', thotSchema);
+thotSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
+
+
+
+
+
+
+
+
+
 
 
 module.exports = thought;
