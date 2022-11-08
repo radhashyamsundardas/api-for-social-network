@@ -4,16 +4,14 @@ const mongoose = require ('mongoose');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-app.use(express,json());
+app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.use(require('./routes'));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/api-for-social-network',{
-    useFindAndModify: false,
     useNewURlParser: true,
-    useUnifiesTopology:true
 });
 
 mongoose.set('debug', true);
