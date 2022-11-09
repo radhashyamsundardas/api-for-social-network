@@ -65,7 +65,7 @@ deleteThought:({params}, res)=>{
     
 },
 
-// addReaction({params, body}, res) {
+// addReaction:({params, body}, res) =>{
 //     Thought.findOneAndUpdate(
 //         { _id: params.thoughtId},
 //         { $addToSet: {reactions: body}},
@@ -90,9 +90,12 @@ deleteThought:({params}, res)=>{
 //     .then(dbThoughtINfo => {
 //         if(!dbThoughtINfo){
 //             res.status(400).json({message: 'no thought found'});
+//             return;
 //         }
+//         res.json({message: 'sucessfully deleted reaction'});
 //     })
-// }
+//     .catch(err => res.status(500).json(err));
+// },
 )
 }
 }
