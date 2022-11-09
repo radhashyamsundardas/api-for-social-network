@@ -66,3 +66,7 @@ deleteUser({params}, res){
 }
 
 
+
+module.exports = userController;
+
+
