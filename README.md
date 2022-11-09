@@ -38,7 +38,7 @@ You would also need VSCODE, INSOMNIA, and INSOMNIA.
 
 ### LIVE LINK AND GITHUB REPOSITORY
 - [Link to repo](https://github.com/radhashyamsundardas/api-for-social-network)
-- [Link to Video]()
+- [Link to Video](https://youtu.be/i1wlfK5fbt0)
 
 
 
